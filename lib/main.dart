@@ -76,6 +76,7 @@ class _SpeechScreenState extends State<SpeechScreen> {
             _text = val.recognizedWords;
             if (val.hasConfidenceRating && val.confidence > 0) {
               _confidence = val.confidence;
+
             }
           }),
         );
