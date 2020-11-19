@@ -1,6 +1,8 @@
 import 'package:avatar_glow/avatar_glow.dart';
 import 'package:flutter/material.dart';
 import 'package:speech_to_text/speech_to_text.dart' as stt;
+import 'face.dart';
+import 'tts.dart';
 
 void main() {
   runApp(MyApp());
@@ -31,6 +33,7 @@ class _SpeechScreenState extends State<SpeechScreen> {
   @override
   void initState() {
     super.initState();
+    speak("What do you want to do?");
     _speech = stt.SpeechToText();
   }
 
@@ -43,7 +46,6 @@ class _SpeechScreenState extends State<SpeechScreen> {
       ),
       body: GestureDetector(
         onTap: () {
-          print("1");
           return _listen();
         },
         child: Container(
@@ -76,7 +78,10 @@ class _SpeechScreenState extends State<SpeechScreen> {
             _text = val.recognizedWords;
             if (val.hasConfidenceRating && val.confidence > 0) {
               _confidence = val.confidence;
-
+            }
+            if(_text.contains('around') || _text.contains('front')) {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => face()));
             }
           }),
         );
