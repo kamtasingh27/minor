@@ -31,6 +31,8 @@ dependencies:
   speech_to_text: ^2.3.0
   avatar_glow: ^1.2.0
   flutter_tts: ^1.3.0
+  image_picker:
+  firebase_ml_vision:
 
 dev_dependencies:
   flutter_test:
