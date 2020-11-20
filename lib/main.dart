@@ -41,8 +41,8 @@ class _SpeechScreenState extends State<SpeechScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-      title: Text('Accuracy: ${(_confidence * 100.0).toStringAsFixed(1)}%'),
-      backgroundColor: Colors.black,
+        title: Text('Accuracy: ${(_confidence * 100.0).toStringAsFixed(1)}%'),
+        backgroundColor: Colors.black,
       ),
       body: GestureDetector(
         onTap: () {
@@ -72,12 +72,12 @@ class _SpeechScreenState extends State<SpeechScreen> {
         onError: (val) => print('onError: $val'),
       );
       if (available) {
-        set       if (val.hasConfidenceRating && val.confidence > 0) {
-          _confidState(() => _isListening = true);
+        setState(() => _isListening = true);
         _speech.listen(
           onResult: (val) => setState(() {
             _text = val.recognizedWords;
-     ence = val.confidence;
+            if (val.hasConfidenceRating && val.confidence > 0) {
+              _confidence = val.confidence;
             }
             if(_text.contains('around') || _text.contains('front')) {
               Navigator.push(
