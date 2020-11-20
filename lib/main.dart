@@ -72,12 +72,12 @@ class _SpeechScreenState extends State<SpeechScreen> {
         onError: (val) => print('onError: $val'),
       );
       if (available) {
-        setState(() => _isListening = true);
+        set       if (val.hasConfidenceRating && val.confidence > 0) {
+          _confidState(() => _isListening = true);
         _speech.listen(
           onResult: (val) => setState(() {
             _text = val.recognizedWords;
-            if (val.hasConfidenceRating && val.confidence > 0) {
-              _confidence = val.confidence;
+     ence = val.confidence;
             }
             if(_text.contains('around') || _text.contains('front')) {
               Navigator.push(

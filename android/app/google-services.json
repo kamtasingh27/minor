@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "628754835301",
+    "firebase_url": "https://minor-b31b1.firebaseio.com",
+    "project_id": "minor-b31b1",
+    "storage_bucket": "minor-b31b1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:628754835301:android:53b185b96e43c92f04238c",
+        "android_client_info": {
+          "package_name": "com.sem5.minor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "628754835301-cheej9o2chfpn3fome8vsa65576cn44s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAc-O_Ti2GTGgxu3DSYQWE7LHgZ4tYrZWs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "628754835301-cheej9o2chfpn3fome8vsa65576cn44s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
