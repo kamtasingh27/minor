@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:minor/currency.dart';
 import 'package:speech_to_text/speech_to_text.dart' as stt;
 import 'face.dart';
 import 'tts.dart';
@@ -81,6 +82,10 @@ class _SpeechScreenState extends State<SpeechScreen> {
             if(_text.contains('around') || _text.contains('front')) {
               Navigator.push(
                   context, MaterialPageRoute(builder: (context) => face()));
+            }
+            else if (_text.contains('currency') ) {
+            Navigator.push(
+            context, MaterialPageRoute(builder: (context) => currency()));
             }
           }),
         );

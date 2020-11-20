@@ -26,6 +26,7 @@ class _faceState extends State<face> {
 
     final ImageLabeler cloudLabeler =
     FirebaseVision.instance.cloudImageLabeler();
+    final ImageLabeler labeler = FirebaseVision.instance.imageLabeler();
 
     final List<ImageLabel> cloudLabels =
     await cloudLabeler.processImage(visionImage);
