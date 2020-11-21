@@ -25,7 +25,7 @@ class _faceState extends State<face> {
     FirebaseVisionImage visionImage = FirebaseVisionImage.fromFile(pickedImage);
 
     final ImageLabeler cloudLabeler =
-    FirebaseVision.instance.cloudImageLabeler();
+    FirebaseVision.instance.imageLabeler();
     final ImageLabeler labeler = FirebaseVision.instance.imageLabeler();
 
     final List<ImageLabel> cloudLabels =

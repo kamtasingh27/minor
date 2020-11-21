@@ -43,6 +43,9 @@
         <meta-data
         android:name="com.google.firebase.ml.vision.DEPENDENCIES"
         android:value="label" />
+        <meta-data
+            android:name="com.google.mlkit.vision.DEPENDENCIES"
+            android:value="ica" />
         <!-- Don't delete the meta-data below.
              This is used by the Flutter tool to generate GeneratedPluginRegistrant.java -->
         <meta-data
