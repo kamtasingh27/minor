@@ -56,6 +56,9 @@ flutter:
   assets:
     - assets/model_unquant.tflite
     - assets/labels.txt
+    - assets/model_unquant2.tflite
+    - assets/labels2.txt
+
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 
