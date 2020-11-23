@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import "package:tflite/tflite.dart";
 import 'package:image_picker/image_picker.dart';
 import 'dart:io';
+import 'tts.dart';
 
 
 class currency extends StatefulWidget {
@@ -47,16 +48,7 @@ class _currencyState extends State<currency> {
             SizedBox(
               height: 20,
             ),
-            _outputs != null
-                ? Text(
-              "${_outputs[0]["label"]}",
-              style: TextStyle(
-                color: Colors.black,
-                fontSize: 20.0,
-                background: Paint()..color = Colors.white,
-              ),
-            )
-                : Container()
+
           ],
         ),
       ),
@@ -89,6 +81,12 @@ class _currencyState extends State<currency> {
       _loading = false;
       _outputs = output;
     });
+    if (_outputs!=null)
+    {speak("Yippie! you got ${_outputs[0]["label"].toString().substring(2)} rupees now you will be rich");
+    Navigator.pop(context);
+    Navigator.pop(context);
+    Navigator.pop(context);
+    }
   }
 
   loadModel() async {

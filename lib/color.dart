@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import "package:tflite/tflite.dart";
 import 'package:image_picker/image_picker.dart';
 import 'dart:io';
+import 'tts.dart';
 
 
 class color extends StatefulWidget {
@@ -67,6 +68,7 @@ class _colorState extends State<color> {
     );
   }
 
+
   pickImage() async {
     var image = await ImagePicker.pickImage(source: ImageSource.camera);
     if (image == null) return null;
@@ -85,10 +87,17 @@ class _colorState extends State<color> {
       imageMean: 127.5,
       imageStd: 127.5,
     );
-    setState(() {
+    setState (() {
       _loading = false;
       _outputs = output;
     });
+    if (_outputs!=null)
+      {speak("this seems to be ${_outputs[0]["label"].toString().substring(2)} color");
+      Navigator.pop(context);
+      Navigator.pop(context);
+
+
+      }
   }
 
   loadModel() async {
