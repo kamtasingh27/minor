@@ -36,6 +36,7 @@ dependencies:
   tflite: ^1.0.5
   percent_indicator: ^2.1.1+1
   camera: ^0.5.7+4
+  mlkit:
 
 dev_dependencies:
   flutter_test:
