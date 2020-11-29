@@ -19,7 +19,7 @@ class _currencyState extends State<currency> {
   void initState() {
     super.initState();
     _loading = true;
-
+    speak('Try to capture the notes one by one. Click anywhere to open the camera.');
     loadModel().then((value) {
       setState(() {
         _loading = false;
@@ -31,7 +31,15 @@ class _currencyState extends State<currency> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Teachable Machine Learning'),
+        title: const Text(
+            'Currency Recognition',
+            style: TextStyle(
+              fontFamily: 'nerko',
+              fontSize: 30,
+              color: Colors.red,
+            ),
+        ),
+        backgroundColor: Colors.black,
       ),
       body: _loading
           ? Container(
@@ -44,18 +52,21 @@ class _currencyState extends State<currency> {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            _image == null ? Container() : Image.file(_image),
-            SizedBox(
-              height: 20,
-            ),
-
+            _image == null ? GestureDetector(
+              onTap: pickImage,
+              child: Container(
+                height: double.infinity,
+                width: double.infinity,
+                color: Colors.black,
+              ),
+            ) : Image.file(_image),
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: pickImage,
-        child: Icon(Icons.image),
-      ),
+      // floatingActionButton: FloatingActionButton(
+      //   onPressed: pickImage,
+      //   child: Icon(Icons.image),
+      // ),
     );
   }
 
@@ -82,7 +93,7 @@ class _currencyState extends State<currency> {
       _outputs = output;
     });
     if (_outputs!=null)
-    {speak("Yippie! you got ${_outputs[0]["label"].toString().substring(2)} rupees now you will be rich");
+    {speak("Yippie! you got ${_outputs[0]["label"].toString().substring(2)} rupees, now you will be rich");
     Navigator.pop(context);
     Navigator.pop(context);
     Navigator.pop(context);

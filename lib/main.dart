@@ -42,7 +42,15 @@ class _SpeechScreenState extends State<SpeechScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Accuracy: ${(_confidence * 100.0).toStringAsFixed(1)}%'),
+        title: Center(
+          child: Text(
+              'Accuracy: ${(_confidence * 100.0).toStringAsFixed(1)}%',
+            style: TextStyle(
+                fontFamily: 'nerko',
+                color: Colors.red,
+                fontSize: 30
+          ),),
+        ),
         backgroundColor: Colors.black,
       ),
       body: GestureDetector(
@@ -56,6 +64,7 @@ class _SpeechScreenState extends State<SpeechScreen> {
           child: Text(
             _text,
             style: const TextStyle(
+              fontFamily: 'nerko',
               fontSize: 32.0,
               color: Colors.white,
               fontWeight: FontWeight.w400,
