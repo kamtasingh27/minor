@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:minor/color.dart';
 import 'package:minor/currency.dart';
-import 'package:minor/text.dart';
 import 'package:speech_to_text/speech_to_text.dart' as stt;
 import 'face.dart';
 import 'tts.dart';

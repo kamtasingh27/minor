@@ -19,7 +19,7 @@ class _colorState extends State<color> {
   void initState() {
     super.initState();
     _loading = true;
-
+    speak('Click anywhere to open the camera and take a photo');
     loadModel().then((value) {
       setState(() {
         _loading = false;
@@ -31,7 +31,15 @@ class _colorState extends State<color> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Teachable Machine Learning'),
+        title: const Text(
+          'Color Recognition',
+          style: TextStyle(
+            fontFamily: 'nerko',
+            fontSize: 30,
+            color: Colors.red,
+          ),
+        ),
+        backgroundColor: Colors.black,
       ),
       body: _loading
           ? Container(
@@ -44,10 +52,29 @@ class _colorState extends State<color> {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            _image == null ? Container() : Image.file(_image),
-            SizedBox(
-              height: 20,
-            ),
+            _image == null ? Expanded(
+              child: GestureDetector(
+                onTap: pickImage,
+                child: Container(
+                  height: double.infinity,
+                  width: double.infinity,
+                  color: Colors.black,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        'Click anywhere to open the Camera',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 30,
+                            fontFamily: 'nerko'
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ): Image.file(_image),
             _outputs != null
                 ? Text(
               "${_outputs[0]["label"]}",
@@ -60,10 +87,6 @@ class _colorState extends State<color> {
                 : Container()
           ],
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: pickImage,
-        child: Icon(Icons.image),
       ),
     );
   }

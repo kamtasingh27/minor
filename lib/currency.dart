@@ -52,21 +52,32 @@ class _currencyState extends State<currency> {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            _image == null ? GestureDetector(
-              onTap: pickImage,
-              child: Container(
-                height: double.infinity,
-                width: double.infinity,
-                color: Colors.black,
+            _image == null ? Expanded(
+              child: GestureDetector(
+                onTap: pickImage,
+                child: Container(
+                  height: double.infinity,
+                  width: double.infinity,
+                  color: Colors.black,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        'Click anywhere to open the Camera',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 30,
+                          fontFamily: 'nerko'
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
               ),
             ) : Image.file(_image),
           ],
         ),
       ),
-      // floatingActionButton: FloatingActionButton(
-      //   onPressed: pickImage,
-      //   child: Icon(Icons.image),
-      // ),
     );
   }
 
