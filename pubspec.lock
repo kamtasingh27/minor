@@ -8,13 +8,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.5.0-nullsafety.1"
-  avatar_glow:
-    dependency: "direct main"
-    description:
-      name: avatar_glow
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.2.0"
   boolean_selector:
     dependency: transitive
     description:
@@ -43,6 +36,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.2.0-nullsafety.1"
+  clipboard:
+    dependency: "direct main"
+    description:
+      name: clipboard
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.1.2+8"
   clock:
     dependency: transitive
     description:
@@ -71,6 +71,34 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.2.0-nullsafety.1"
+  firebase_core:
+    dependency: "direct main"
+    description:
+      name: firebase_core
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.5.2+1"
+  firebase_core_platform_interface:
+    dependency: transitive
+    description:
+      name: firebase_core_platform_interface
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.1.0"
+  firebase_core_web:
+    dependency: transitive
+    description:
+      name: firebase_core_web
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.2.1+1"
+  firebase_ml_vision:
+    dependency: "direct main"
+    description:
+      name: firebase_ml_vision
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.9.9"
   flutter:
     dependency: "direct main"
     description: flutter
@@ -128,6 +156,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.1.1"
+  js:
+    dependency: transitive
+    description:
+      name: js
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.6.2"
   json_annotation:
     dependency: transitive
     description:
@@ -177,6 +212,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.3"
+  quiver:
+    dependency: transitive
+    description:
+      name: quiver
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.1.5"
   sky_engine:
     dependency: transitive
     description: flutter

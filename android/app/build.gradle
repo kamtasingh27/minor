@@ -68,12 +68,5 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation platform('com.google.firebase:firebase-bom:26.1.0')
     implementation 'com.google.firebase:firebase-analytics'
-    implementation 'com.google.android.gms:play-services-vision:20.1.2'
-    implementation 'com.google.android.gms:play-services-vision-common:19.1.2'
-    implementation 'com.google.android.gms:play-services-vision-image-label:18.1.0'
-    implementation 'com.google.mlkit:image-labeling:17.0.0'
-    implementation 'com.google.android.gms:play-services-mlkit-image-labeling:16.0.0'
-    implementation 'com.google.mlkit:image-labeling-automl:16.2.1'
-    implementation 'com.google.mlkit:linkfirebase:16.0.1'
-    implementation 'com.google.firebase:firebase-ml-vision-image-label-model:20.0.2'
+    implementation 'com.google.android.gms:play-services-mlkit-text-recognition:16.1.1'
 }

@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:minor/color.dart';
 import 'package:minor/currency.dart';
+import 'package:minor/text.dart';
 import 'package:speech_to_text/speech_to_text.dart' as stt;
 import 'face.dart';
 import 'tts.dart';
+import 'text/recognise.dart';
 
 void main() {
   runApp(MyApp());
@@ -100,6 +102,10 @@ class _SpeechScreenState extends State<SpeechScreen> {
             else if (_text.contains('color')|| _text.contains('colour') ) {
               Navigator.push(
                   context, MaterialPageRoute(builder: (context) => color()));
+            }
+            else if (_text.contains('text')|| _text.contains('read') ) {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => TextRecognitionWidget()));
             }
           }),
         );
