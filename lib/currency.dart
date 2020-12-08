@@ -47,6 +47,7 @@ class _currencyState extends State<currency> {
         child: CircularProgressIndicator(),
       )
           : Container(
+        color: Colors.black,
         width: MediaQuery.of(context).size.width,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -74,7 +75,22 @@ class _currencyState extends State<currency> {
                   ),
                 ),
               ),
-            ) : Image.file(_image),
+            ) : Column(
+              children: [
+                Image.file(_image),
+                SizedBox(
+                  height: 10,
+                ),
+                Text(
+                  "Yippie! you got ${_outputs[0]["label"].toString().substring(2)} rupees, now you will be rich",
+                  style: TextStyle(
+                    color: Colors.red,
+                    fontFamily: 'nerko',
+                    fontSize: 30,
+                  ),
+                ),
+              ],
+            ),
           ],
         ),
       ),

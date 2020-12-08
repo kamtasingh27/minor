@@ -39,35 +39,51 @@ class _TextRecognitionWidgetState extends State<TextRecognitionWidget> {
             child: CircularProgressIndicator(),
           )
               : Container(
+            color: Colors.black,
             width: MediaQuery.of(context).size.width,
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                image == null ? Expanded(
-                  child: GestureDetector(
-                    onTap: pickImage,
-                    child: Container(
-                      height: double.infinity,
-                      width: double.infinity,
-                      color: Colors.black,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            'Click anywhere to open the Camera',
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 30,
-                                fontFamily: 'nerko'
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  image == null ? Expanded(
+                    child: GestureDetector(
+                      onTap: pickImage,
+                      child: Container(
+                        height: double.infinity,
+                        width: double.infinity,
+                        color: Colors.black,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              'Click anywhere to open the Camera',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 30,
+                                  fontFamily: 'nerko'
+                              ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                     ),
+                  ): Column(
+                    children: [
+                      Image.file(image),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Text(
+                          _text,
+                          style: TextStyle(
+                            color: Colors.red,
+                            fontFamily: 'nerko',
+                            fontSize: 30,
+                          ),
+                        ),
+                    ],
                   ),
-                ): Image.file(image),
-              ],
+                ],
             ),
           ),
       );

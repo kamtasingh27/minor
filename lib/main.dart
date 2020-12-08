@@ -3,7 +3,6 @@ import 'package:minor/color.dart';
 import 'package:minor/currency.dart';
 import 'package:minor/text/expiry.dart';
 import 'package:speech_to_text/speech_to_text.dart' as stt;
-import 'face.dart';
 import 'tts.dart';
 import 'text/recognise.dart';
 
@@ -91,11 +90,8 @@ class _SpeechScreenState extends State<SpeechScreen> {
             if (val.hasConfidenceRating && val.confidence > 0) {
               _confidence = val.confidence;
             }
-            if(_text.contains('around') || _text.contains('front')) {
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => face()));
-            }
-            else if (_text.contains('currency') ) {
+
+            if (_text.contains('currency') ) {
             Navigator.push(
             context, MaterialPageRoute(builder: (context) => currency()));
             }

@@ -47,6 +47,7 @@ class _colorState extends State<color> {
         child: CircularProgressIndicator(),
       )
           : Container(
+        color: Colors.black,
         width: MediaQuery.of(context).size.width,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -74,7 +75,22 @@ class _colorState extends State<color> {
                   ),
                 ),
               ),
-            ): Image.file(_image),
+            ): Column(
+              children: [
+                Image.file(_image),
+                SizedBox(
+                  height: 10,
+                ),
+                Text(
+                  "This seems to be ${_outputs[0]["label"].toString().substring(2)} color",
+                  style: TextStyle(
+                    color: Colors.red,
+                    fontFamily: 'nerko',
+                    fontSize: 30,
+                  ),
+                ),
+              ],
+            ),
           ],
         ),
       ),
@@ -105,7 +121,7 @@ class _colorState extends State<color> {
       _outputs = output;
     });
     if (_outputs!=null)
-      {speak("this seems to be ${_outputs[0]["label"].toString().substring(2)} color");
+      {speak("This seems to be ${_outputs[0]["label"].toString().substring(2)} color");
       }
   }
 
