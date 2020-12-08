@@ -1,11 +1,9 @@
 import 'dart:io';
 
-import 'package:clipboard/clipboard.dart';
 import 'api.dart';
-import 'area.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
-import 'controls.dart';
+import 'package:minor/tts.dart';
 
 class TextRecognitionWidget extends StatefulWidget {
   const TextRecognitionWidget({
@@ -17,89 +15,87 @@ class TextRecognitionWidget extends StatefulWidget {
 }
 
 class _TextRecognitionWidgetState extends State<TextRecognitionWidget> {
-  String text = '';
+  String _text = '';
   File image;
+  bool _loading = false;
 
   @override
   Widget build(BuildContext context) =>
       Scaffold(
           appBar: AppBar(
-            title: Text('fuckthis'),
+            title: const Text(
+              'Text Recognition',
+              style: TextStyle(
+                fontFamily: 'nerko',
+                fontSize: 30,
+                color: Colors.red,
+              ),
+            ),
+            backgroundColor: Colors.black,
           ),
-          body: Padding(
-            padding: const EdgeInsets.all(8),
+          body:_loading
+              ? Container(
+            alignment: Alignment.center,
+            child: CircularProgressIndicator(),
+          )
+              : Container(
+            width: MediaQuery.of(context).size.width,
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const SizedBox(height: 25),
-                Expanded(
-                  child: Column(
-                    children: [
-                      Expanded(child: buildImage()),
-                      const SizedBox(height: 16),
-                      ControlsWidget(
-                        onClickedPickImage: pickImage,
-                        onClickedScanText: scanText,
-                        onClickedClear: clear,
+                image == null ? Expanded(
+                  child: GestureDetector(
+                    onTap: pickImage,
+                    child: Container(
+                      height: double.infinity,
+                      width: double.infinity,
+                      color: Colors.black,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            'Click anywhere to open the Camera',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 30,
+                                fontFamily: 'nerko'
+                            ),
+                          ),
+                        ],
                       ),
-                      const SizedBox(height: 16),
-                      TextAreaWidget(
-                        text: text,
-                        onClickedCopy: copyToClipboard,
-                      ),
-                    ],
+                    ),
                   ),
-                ),
-                const SizedBox(height: 15),
+                ): Image.file(image),
               ],
             ),
           ),
       );
 
-Widget buildImage() => Container(
-    child: image != null
-        ? Image.file(image)
-        : Icon(Icons.photo, size: 80, color: Colors.black),
-  );
 
   Future pickImage() async {
     final file = await ImagePicker().getImage(source: ImageSource.camera);
     setImage(File(file.path));
+    scanText();
   }
 
   Future scanText() async {
-    showDialog(
-      context: context,
-      child: Center(
-        child: CircularProgressIndicator(),
-      ),
-    );
-
     final text = await FirebaseMLApi.recogniseText(image);
-    setText(text);
-
-    Navigator.of(context).pop();
-  }
-
-  void clear() {
-    setImage(null);
-    setText('');
-  }
-
-  void copyToClipboard() {
-    if (text.trim() != '') {
-      FlutterClipboard.copy(text);
+    setState (() {
+      _text = text;
+      _loading = false;
+    });
+    if (_text!=null)
+    {
+      speak(_text);
+      print(_text);
     }
   }
+
 
   void setImage(File newImage) {
     setState(() {
       image = newImage;
-    });
-  }
-
-  void setText(String newText) {
-    setState(() {
-      text = newText;
     });
   }
 }

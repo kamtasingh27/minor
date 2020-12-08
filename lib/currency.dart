@@ -105,9 +105,7 @@ class _currencyState extends State<currency> {
     });
     if (_outputs!=null)
     {speak("Yippie! you got ${_outputs[0]["label"].toString().substring(2)} rupees, now you will be rich");
-    Navigator.pop(context);
-    Navigator.pop(context);
-    Navigator.pop(context);
+
     }
   }
 

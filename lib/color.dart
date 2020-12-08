@@ -75,16 +75,6 @@ class _colorState extends State<color> {
                 ),
               ),
             ): Image.file(_image),
-            _outputs != null
-                ? Text(
-              "${_outputs[0]["label"]}",
-              style: TextStyle(
-                color: Colors.black,
-                fontSize: 20.0,
-                background: Paint()..color = Colors.white,
-              ),
-            )
-                : Container()
           ],
         ),
       ),
@@ -116,10 +106,6 @@ class _colorState extends State<color> {
     });
     if (_outputs!=null)
       {speak("this seems to be ${_outputs[0]["label"].toString().substring(2)} color");
-      Navigator.pop(context);
-      Navigator.pop(context);
-
-
       }
   }
 

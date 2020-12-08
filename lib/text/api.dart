@@ -11,7 +11,6 @@ class FirebaseMLApi {
       try {
         final visionText = await textRecognizer.processImage(visionImage);
         await textRecognizer.close();
-
         final text = extractText(visionText);
         return text.isEmpty ? 'No text found in the image' : text;
       } catch (error) {
