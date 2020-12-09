@@ -135,6 +135,13 @@ class _ExpiryState extends State<Expiry> {
         out=ans;
         speak(ans + '''And Today's Date ''' + date.day.toString() + ' ' + date.month.toString()+' '+date.year.toString());
       }
+      else if(_text.contains('Exp. Date'))
+      {
+        int index = _text.indexOf('Exp. Date');
+        var ans = _text.substring(index,index+18);
+        out=ans;
+        speak(ans + '''And Today's Date ''' + date.day.toString() + ' ' + date.month.toString()+' '+date.year.toString());
+      }
       else if(_text.contains('expiry'))
       {
         int index = _text.indexOf('expiry date');
