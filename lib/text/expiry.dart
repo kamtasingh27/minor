@@ -1,4 +1,5 @@
 import 'dart:io';
+
 import 'api.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
@@ -70,22 +71,25 @@ class _ExpiryState extends State<Expiry> {
                       ),
                     ),
                   ),
-                ): Column(
-                  children: [
-                    Image.file(image),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    Text(
-                      out + '''
-                      Today's Date : ''' + date.day.toString() + ' ' + date.month.toString()+' '+date.year.toString(),
-                      style: TextStyle(
-                        color: Colors.red,
-                        fontFamily: 'nerko',
-                        fontSize: 30,
+                ): GestureDetector(
+                  onTap: ()=> Navigator.of(context).pushNamedAndRemoveUntil('/', (Route<dynamic> route) => false),
+                  child: Column(
+                    children: [
+                      Image.file(image),
+                      SizedBox(
+                        height: 10,
                       ),
-                    )
-                  ],
+                      Text(
+                        out + '''
+                        Today's Date : ''' + date.day.toString() + ' ' + date.month.toString()+' '+date.year.toString(),
+                        style: TextStyle(
+                          color: Colors.red,
+                          fontFamily: 'nerko',
+                          fontSize: 30,
+                        ),
+                      )
+                    ],
+                  ),
                 ),
               ],
           ),
@@ -140,67 +144,67 @@ class _ExpiryState extends State<Expiry> {
         int index = _text.indexOf('Exp. Date');
         var ans = _text.substring(index,index+18);
         out=ans;
-        speak(ans + '''And Today's Date ''' + date.day.toString() + ' ' + date.month.toString()+' '+date.year.toString());
+        speak(ans + '''And Today's Date ''' + date.day.toString() + ' ' + date.month.toString()+' '+date.year.toString()+"Click anywhere to start again.");
       }
       else if(_text.contains('expiry'))
       {
         int index = _text.indexOf('expiry date');
         var ans = _text.substring(index,index+20);
         out=ans;
-        speak(ans + '''And Today's Date ''' + date.day.toString() + ' ' + date.month.toString()+' '+date.year.toString());
+        speak(ans + '''And Today's Date ''' + date.day.toString() + ' ' + date.month.toString()+' '+date.year.toString()+"Click anywhere to start again.");
       }
       else if(_text.contains('EXPIRY DATE'))
       {
         int index = _text.indexOf('EXPIRY DATE');
         var ans = _text.substring(index,index+20);
         out=ans;
-        speak(ans + '''And Today's Date ''' + date.day.toString() + ' ' + date.month.toString()+' '+date.year.toString());
+        speak(ans + '''And Today's Date ''' + date.day.toString() + ' ' + date.month.toString()+' '+date.year.toString()+"Click anywhere to start again.");
       }
       else if(_text.contains('Exp'))
       {
         int index = _text.indexOf('Exp');
         var ans = _text.substring(index,index+12);
         out=ans;
-        speak(ans + '''And Today's Date ''' + date.day.toString() + ' ' + date.month.toString()+' '+date.year.toString());
+        speak(ans + '''And Today's Date ''' + date.day.toString() + ' ' + date.month.toString()+' '+date.year.toString()+"Click anywhere to start again.");
       }
       else if(_text.contains('exp'))
       {
         int index = _text.indexOf('exp');
         var ans = _text.substring(index,index+12);
         out=ans;
-        speak(ans + '''And Today's Date ''' + date.day.toString() + ' ' + date.month.toString()+' '+date.year.toString());
+        speak(ans + '''And Today's Date ''' + date.day.toString() + ' ' + date.month.toString()+' '+date.year.toString()+"Click anywhere to start again.");
       }
       else if(_text.contains('EXP'))
       {
         int index = _text.indexOf('EXP');
         var ans = _text.substring(index,index+12);
         out=ans;
-        speak(ans + '''And Today's Date ''' + date.day.toString() + ' ' + date.month.toString()+' '+date.year.toString());
+        speak(ans + '''And Today's Date ''' + date.day.toString() + ' ' + date.month.toString()+' '+date.year.toString()+"Click anywhere to start again.");
       }
       else if(_text.contains('Expiry'))
       {
         int index = _text.indexOf('Expiry');
         var ans = _text.substring(index,index+15);
         out=ans;
-        speak(ans + '''And Today's Date ''' + date.day.toString() + ' ' + date.month.toString()+' '+date.year.toString());
+        speak(ans + '''And Today's Date ''' + date.day.toString() + ' ' + date.month.toString()+' '+date.year.toString()+"Click anywhere to start again.");
       }
       else if(_text.contains('expiry'))
       {
         int index = _text.indexOf('expiry');
         var ans = _text.substring(index,index+15);
         out=ans;
-        speak(ans + '''And Today's Date ''' + date.day.toString() + ' ' + date.month.toString()+' '+date.year.toString());
+        speak(ans + '''And Today's Date ''' + date.day.toString() + ' ' + date.month.toString()+' '+date.year.toString()+"Click anywhere to start again.");
       }
       else if(_text.contains('EXPIRY'))
       {
         int index = _text.indexOf('EXPIRY');
         var ans = _text.substring(index,index+15);
         out=ans;
-        speak(ans + '''And Today's Date ''' + date.day.toString() + ' ' + date.month.toString()+' '+date.year.toString());
+        speak(ans + '''And Today's Date ''' + date.day.toString() + ' ' + date.month.toString()+' '+date.year.toString()+"Click anywhere to start again.");
       }
       else
       {
-        speak('No expiry date found. Please try taking another photo from another side or angle.');
+        speak('No expiry date found. Please try taking another photo from another side or angle. Click anywhere to start again');
         out = 'No expiry date found. Please try taking another photo from another side or angle.';
       }
     }

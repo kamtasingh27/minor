@@ -36,7 +36,6 @@ dependencies:
   camera: ^0.5.7+4
   firebase_core: ^0.5.2+1
   firebase_ml_vision: ^0.9.7
-  clipboard: ^0.1.2+8
   intl: ^0.16.1
 
 dev_dependencies:

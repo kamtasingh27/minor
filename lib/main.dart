@@ -7,7 +7,9 @@ import 'tts.dart';
 import 'text/recognise.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(
+      MyApp()
+  );
 }
 
 class MyApp extends StatelessWidget {

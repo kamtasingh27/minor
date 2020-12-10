@@ -75,21 +75,24 @@ class _currencyState extends State<currency> {
                   ),
                 ),
               ),
-            ) : Column(
-              children: [
-                Image.file(_image),
-                SizedBox(
-                  height: 10,
-                ),
-                Text(
-                  "Yippie! you got ${_outputs[0]["label"].toString().substring(2)} rupees, now you will be rich",
-                  style: TextStyle(
-                    color: Colors.red,
-                    fontFamily: 'nerko',
-                    fontSize: 30,
+            ) : GestureDetector(
+              onTap: ()=> Navigator.of(context).pushNamedAndRemoveUntil('/', (Route<dynamic> route) => false),
+              child: Column(
+                children: [
+                  Image.file(_image),
+                  SizedBox(
+                    height: 10,
                   ),
-                ),
-              ],
+                  Text(
+                    "Yippie! you got ${_outputs[0]["label"].toString().substring(2)} rupees, now you will be rich.",
+                    style: TextStyle(
+                      color: Colors.red,
+                      fontFamily: 'nerko',
+                      fontSize: 30,
+                    ),
+                  ),
+                ],
+              ),
             ),
           ],
         ),
@@ -120,7 +123,7 @@ class _currencyState extends State<currency> {
       _outputs = output;
     });
     if (_outputs!=null)
-    {speak("Yippie! you got ${_outputs[0]["label"].toString().substring(2)} rupees, now you will be rich");
+    {speak("Yippie! you got ${_outputs[0]["label"].toString().substring(2)} rupees, now you will be rich.  Click anywhere to start again.");
 
     }
   }
