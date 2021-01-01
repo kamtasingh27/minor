@@ -36,7 +36,47 @@ Download from [here](https://drive.google.com/file/d/1CdN8qS8MfxfzNcjIjHpndbd8lw
 
 ## Screenshots
 
+### Home Page
 
+![](https://raw.githubusercontent.com/kamtasingh27/minor/master/screenshots/WhatsApp%20Image%202021-01-01%20at%208.30.44%20PM%20(10).jpeg)
+
+### Color Recognition
+
+![](https://raw.githubusercontent.com/kamtasingh27/minor/master/screenshots/WhatsApp%20Image%202021-01-01%20at%208.30.44%20PM.jpeg)
+
+![](https://github.com/kamtasingh27/minor/blob/master/screenshots/WhatsApp%20Image%202021-01-01%20at%208.30.44%20PM%20(1).jpeg?raw=true)
+
+![](https://raw.githubusercontent.com/kamtasingh27/minor/master/screenshots/WhatsApp%20Image%202021-01-01%20at%208.30.44%20PM%20(2).jpeg)
+
+### Currency Recognition
+
+![](https://raw.githubusercontent.com/kamtasingh27/minor/master/screenshots/WhatsApp%20Image%202021-01-01%20at%208.30.44%20PM%20(3).jpeg)
+
+![](https://raw.githubusercontent.com/kamtasingh27/minor/master/screenshots/WhatsApp%20Image%202021-01-01%20at%208.30.44%20PM%20(4).jpeg)
+
+![](https://raw.githubusercontent.com/kamtasingh27/minor/master/screenshots/WhatsApp%20Image%202021-01-01%20at%208.30.44%20PM%20(5).jpeg)
+
+![](https://raw.githubusercontent.com/kamtasingh27/minor/master/screenshots/WhatsApp%20Image%202021-01-01%20at%208.30.44%20PM%20(6).jpeg)
+
+![](https://raw.githubusercontent.com/kamtasingh27/minor/master/screenshots/WhatsApp%20Image%202021-01-01%20at%208.30.44%20PM%20(7).jpeg)
+
+![](https://raw.githubusercontent.com/kamtasingh27/minor/master/screenshots/WhatsApp%20Image%202021-01-01%20at%208.30.44%20PM%20(8).jpeg)
+
+![](https://raw.githubusercontent.com/kamtasingh27/minor/master/screenshots/WhatsApp%20Image%202021-01-01%20at%208.30.44%20PM%20(9).jpeg)
+
+### Expiry Date Recognition
+
+![](https://raw.githubusercontent.com/kamtasingh27/minor/master/screenshots/WhatsApp%20Image%202021-01-01%20at%208.30.44%20PM%20(12).jpeg)
+
+![](https://raw.githubusercontent.com/kamtasingh27/minor/master/screenshots/WhatsApp%20Image%202021-01-01%20at%208.30.44%20PM%20(11).jpeg)
+
+### Text Recognition
+
+![](https://raw.githubusercontent.com/kamtasingh27/minor/master/screenshots/WhatsApp%20Image%202021-01-01%20at%208.30.44%20PM%20(13).jpeg)
+
+##Contributors
+
+@github/muskanludhiyani
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
