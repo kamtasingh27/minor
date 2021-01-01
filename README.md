@@ -1,16 +1,43 @@
-# minor
+# BAE - Being Assistant Eyes ![](https://img.shields.io/badge/Flutter%20-%2302569B.svg?&style=for-the-badge&logo=Flutter&logoColor=white) ![](https://img.shields.io/badge/dart-%230175C2.svg?&style=for-the-badge&logo=dart&logoColor=white) ![](https://img.shields.io/badge/TensorFlow%20-%23FF6F00.svg?&style=for-the-badge&logo=TensorFlow&logoColor=white) 
 
-Minor App
+An App for visually impaired people
 
-## Getting Started
+### About the App-
 
-This project is a starting point for a Flutter application.
+Before we began the planning of the
+project thought of practical problems that could occur in similar applications. One of them was
+communication with the Application.
 
-A few resources to get you started if this is your first Flutter project:
+We then came up with the solution of text-to-speech. As easy as it sounds, it’s easier to operate.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+### Usage
+The application welcomes the user with a text note that’s going to ask which operation to perform. The user
+then speaks out the operation he needs to be performed and the application asks the user to click anywhere
+and open camera and point to the object. We have included four features which could be useful to a visually
+impaired person (Text Detection, Expiry Date Recognition, Colour Recognition and Currency Recognition).
+When the person clicks the image it returns the result through speech.
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Features
+
+
+Followings things can be done using our application:
+
+
+* Choosing an outfit
+* Checking if your drink is consumable
+* Counting the amount of money you have
+* Reading out text instructions
+
+ 
+
+## Downloading and Installation
+
+Download from [here](https://drive.google.com/file/d/1CdN8qS8MfxfzNcjIjHpndbd8lwRSAwuO/view?usp=sharing)
+
+## Screenshots
+
+
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
