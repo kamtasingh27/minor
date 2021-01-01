@@ -74,7 +74,7 @@ Download from [here](https://drive.google.com/file/d/1CdN8qS8MfxfzNcjIjHpndbd8lw
 
 ![](https://raw.githubusercontent.com/kamtasingh27/minor/master/screenshots/WhatsApp%20Image%202021-01-01%20at%208.30.44%20PM%20(13).jpeg)
 
-##Contributors
+## Contributors
 
 @github/muskanludhiyani
 
