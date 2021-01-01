@@ -32,8 +32,7 @@ Followings things can be done using our application:
 
 ## Downloading and Installation
 
-Download from [here](https://drive.google.com/file/d/1CdN8qS8MfxfzNcjIjHpndbd8lwRSAwuO/view?usp=sharing)
-
+<a href="https://github.com/kamtasingh27/minor/releases/download/1.0/BAE_release.apk"><img src="https://playerzon.com/asset/download.png" width="200"></img></a>
 ## Screenshots
 
 ### Home Page
@@ -74,9 +73,9 @@ Download from [here](https://drive.google.com/file/d/1CdN8qS8MfxfzNcjIjHpndbd8lw
 
 ![](https://raw.githubusercontent.com/kamtasingh27/minor/master/screenshots/WhatsApp%20Image%202021-01-01%20at%208.30.44%20PM%20(13).jpeg)
 
-## Contributors
+##Contributors
 
-@github/muskanludhiyani
+
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
