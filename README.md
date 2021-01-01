@@ -33,6 +33,13 @@ Followings things can be done using our application:
 ## Downloading and Installation
 
 <a href="https://github.com/kamtasingh27/minor/releases/download/1.0/BAE_release.apk"><img src="https://playerzon.com/asset/download.png" width="200"></img></a>
+
+## Contributors
+
+<a href="https://github.com/MuskanLudhiyani"><img src="https://avatars1.githubusercontent.com/u/45829275?s=460&v=4"></img></a>
+
+[Muskan Ludhiyani](https://github.com/MuskanLudhiyani)
+
 ## Screenshots
 
 ### Home Page
@@ -72,9 +79,6 @@ Followings things can be done using our application:
 ### Text Recognition
 
 ![](https://raw.githubusercontent.com/kamtasingh27/minor/master/screenshots/WhatsApp%20Image%202021-01-01%20at%208.30.44%20PM%20(13).jpeg)
-
-##Contributors
-
 
 
 ## Contributing
